@@ -1,2 +1,2 @@
-# formulario_cei
+# FORMULARIO CEI
 Formulario para inscripción de proyectos del comité de Investigación.
