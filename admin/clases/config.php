@@ -1,0 +1,73 @@
+<?php
+
+//CONFIGURACIONES DE LISTADOS
+
+$tipo_estudio =  [
+    'ESTUDIO OBSERVACIONAL' => 1,
+    'ESTUDIO DE INTERVENCIÓN' => 2,
+    'ESTUDIO SECUNDARIO' => 3,
+    'ESTUDIO CUALITATIVO' => 4
+];
+
+$tipo_trabajo = [
+    'TRABAJO PROPIO' => 1,
+    'TRABAJO DE GRADO' => 2,
+    'TRABAJO COLABORATIVO' => 3, 
+    'INDUSTRIA FARMACÉUTICA' => 4
+];
+
+$tipo_documento = [
+    'CÉDULA DE CIUDADANÍA' => 1,
+    'CÉDULA DE EXTRANJERÍA' => 2,
+    'DOCUMENTO NACIONAL DE IDENTIFICACIÓN' => 3,
+    'PASAPORTE' => 4
+];
+
+$max_nivel_estudio = [    
+    "POSTDOCTORADO" => 1,
+    "DOCTORADO" => 2,
+    "MAESTRÍA" => 3,
+    "ESPECIALIZACIÓN UNIVERSITARIO" => 4,
+    "ESPECIALIZACIÓN TÉCNICO PROFESIONAL" => 5,
+    "ESPECIALIZACIÓN TECNOLÓGICA" => 6,
+    "UNIVERSITARIA" => 7,
+    "TECNOLÓGICA" => 8,
+    "FORMACIÓN TÉCNICA PROFESIONAL" => 9,
+    "ESTUDIANTE PREGRADO" => 10,
+    "ESPECIALIZACIÓN MÉDICO QUIRÚRGICA" => 11,
+    "SIN TÍTULO" => 12
+];
+
+$rol_investigador = [
+    "DIRECTOR DE PROYECTO" => 1,
+    "INVESTIGADOR PRINCIPAL" => 2,
+    "COINVESTIGADOR" => 3,
+    "INVESTIGADOR" => 4,
+    "ASESOR" => 5,
+    "ESTUDIANTE - JOVEN INVESTIGADOR" => 6,
+    "ESTUDIANTE - SEMILLERO" => 7,
+    "AUXILIAR - JOVEN INVESTIGADOR" => 8,
+    "AUXILIAR - SEMILLERO" => 9
+];
+
+$especialidad = [
+    "MEDICINA INTERNA" => 1,
+    "CIRUGÍA GENERAL" => 2,
+    "DERMATOLOGÍA" => 3,
+    "GASTROENTEROLOGÍA" => 4,
+    "GINECOLOGÍA Y OBSTETRICIA" => 5,
+    "MEDICINA CRITICA" => 6,
+    "MEDICINA NUCLEAR" => 7,
+    "OFTALMOLOGÍA" => 8,
+    "ORTOPEDIA Y TRAUMATOLOGÍA" => 9,
+    "OTORRINOLARINGOLOGÍA" => 10,
+    "PEDIATRÍA" => 11,
+    "PSIQUIATRÍA Y SALUD MENTAL" => 12,
+    "RADIOLOGÍA E IMÁGENES DIAGNÓSTICAS" => 13,
+    "UROLOGÍA" => 14,
+    "ANESTESIOLOGÍA" => 15,
+    "SALUD PUBLICA" => 16,
+    "ENFERMERÍA" => 17,
+    "PSICOLOGÍA" => 18
+];
+ 

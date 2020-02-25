@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de Inscripción CEI - Fundación Universitaria Sanitas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    table#thistab tr td {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<p id="banner"><img src="fus_vertical_blanco.png" style="max-width: 100%; width: 300px;"></p>
+
+
+<div id="theform">
+<br><br>
+<h2>Formulario de Inscripción de Proyectos para aprobación por <br>Comité de Ética en Investigación</h2>
+<br><br>
+        <div>
+          <p style="text-align: center;">Por favor registre todos los datos solicitados en las 4 pestañas del presente formulario y al final guarde la inscripción del proyecto. Se deben ingresar los datos completos hasta finalizar y guardar, no se guardarán datos parciales. Si no se completa el registro los datos ingresados se perderán.</p>
+          <br><br>
+        </div>
+
+        <div id="tabsi">
+          <div class="msp" id="for1">
+            <a href="#" onclick="mostrar_trat1('trat1'); return false" id="mostrar_trat1">Datos generales del proyecto</a></div>
+          <div class="msp" id="for2">
+            <a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2">Resumen del proyecto</a></div>
+          <div class="msp" id="for3">
+            <a href="#" onclick="mostrar_trat3('trat3'); return false" id="mostrar_trat3">Datos de financiamiento</a></div>
+          <div class="msp" id="for4">
+            <a href="#" onclick="mostrar_trat4('trat4'); return false" id="mostrar_trat4">Datos del grupo y los autores</a></div>
+          <div class="msp" id="for5">
+            <a href="#" onclick="mostrar_trat5('trat5'); return false" id="mostrar_trat5">Documentos requeridos</a></div>
+        </div>
+
+        <!-- <form id="form1" name="form1" method="post" action="admin/clases/procesar.php" onsubmit="return validate_form();" novalidate> -->
+          <form id="form1" name="form1" method="post" action="#">
+          <div id="trat1" style="display: none">
+            <div class="thecont">
+              <label for="frmTitulo">Título completo del trabajo *</label>
+              <input type="text" id="frmTitulo" name="frmTitulo" class="required_tab1 str_int_on" size="100" maxlength="400" data-msj="msjTitulo"/>
+              <div id="msjTitulo"></div>
+
+              <label for="frmEstudio">Tipo de estudio *</label>
+                <select name="frmEstudio" id="frmEstudio" class="required_tab1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Estudio observacional</option>
+                  <option value="2">Estudio de intervención</option>
+                  <option value="3">Estudio secundario</option>
+                  <option value="4">Estudio cualitativo</option>
+                </select>
+
+                <label for="frmTipoTrabajo">Tipo de trabajo *</label>
+                <select name="frmTipoTrabajo" id="frmTipoTrabajo" class="required_tab1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Trabajo propio</option>
+                  <option value="2">Trabajo de grado</option>
+                  <option value="3">Trabajo colaborativo</option>
+                  <option value="4">Industria farmacéutica</option>
+                </select>
+
+                <label for="frmLugarRecc">Lugar en donde se realiza la recolección/reclutamiento de sujetos *</label>
+                <input type="checkbox" name="frmLugarRecc[]" value="1"/>Clínica Universitaria Colombia
+                <input type="checkbox" name="frmLugarRecc[]" value="2"/>Clínica Reina Sofía
+                <input type="checkbox" name="frmLugarRecc[]" value="3"/>Clinicentro
+                <input type="checkbox" name="frmLugarRecc[]" value="4"/>UAP
+                <input type="checkbox" name="frmLugarRecc[]" value="5"/>Clínica Pediátrica
+                <input type="checkbox" name="frmLugarRecc[]" value="6" id="otra_institucion"/>Otra institución
+                <br>
+                <label for="frmOtraInstitucion">Si elegió "Otra institución", mencione cuál:</label>
+                <input type="text" id="frmOtraInstitucion" name="frmOtraInstitucion" size="100" maxlength="100" class="required_tab1" data-msj="msjOtraInstitucion"/>
+                <div id="msjOtraInstitucion"></div>
+             
+
+              <p class="botnar"><a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2"> <i class="fa fa-angle-double-right"></i> </a></p>
+
+
+             
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div id="trat2" style="display: none">
+            <div class="thecont">
+
+              <label for="frmPregunta">Pregunta de investigación * (máximo 100 caracteres)</label>
+              <input type="text" id="frmPregunta" name="frmPregunta" class="required_tab2 str_int_on" data-msj="msjPregunta" size="100" maxlength="100"/>
+              <div id="msjPregunta"></div>
+
+              <label for="frmObjetivo">Objetivo general * (máximo 100 caracteres)</label>
+              <input type="text" id="frmObjetivo" name="frmObjetivo" class="required_tab2 str_int_on" data-msj="msjObjetivo" size="100" maxlength="100"/>
+              <div id="msjObjetivo"></div>
+
+              <label for="frmObjetivoEsp">Objetivo específico * (máximo 500 caracteres)</label>
+              <input type="text" id="frmObjetivoEsp" name="frmObjetivoEsp" class="required_tab2 str_int_on" data-msj="msjObjetivoEsp" size="100" maxlength="500"/>
+              <div id="msjObjetivoEsp"></div>
+
+              <label for="frmPoblacion">Población/participantes * (máximo 100 caracteres)</label>
+              <input type="text" id="frmPoblacion" name="frmPoblacion" class="required_tab2 str_int_on" data-msj="msjPoblacion" size="100" maxlength="100"/>
+              <div id="msjPoblacion"></div>
+
+              <label for="frmTratamiento">Tratamiento/intervención * (máximo 500 caracteres)</label>
+              <input type="text" id="frmTratamiento" name="frmTratamiento" class="required_tab2 str_int_on" data-msj="msjTratamiento" size="100" maxlength="500"/>
+              <div id="msjTratamiento"></div>
+
+              <label for="frmAnalisis">Análisis de datos * (máximo 250 caracteres)</label>
+              <input type="text" id="frmAnalisis" name="frmAnalisis" class="required_tab2 str_int_on" data-msj="msjAnalisis" size="100" maxlength="250"/>
+              <div id="msjAnalisis"></div>
+
+              <label for="frmResultados">Resultados esperados del proyecto * (máximo 500 caracteres)</label>
+              <input type="text" id="frmResultados" name="frmResultados" class="required_tab2 str_int_on" data-msj="msjResultados" size="100" maxlength="500"/>
+              <div id="msjResultados"></div>
+
+              <label for="frmDuracion">Duración del proyecto  (meses) * (máximo 250 caracteres)</label>
+              <input type="text" id="frmDuracion" name="frmDuracion" class="required_tab2 str_int_on" data-msj="msjDuracion" size="100" maxlength="250" data-msj="msjDuracion" />
+              <div id="msjDuracion"></div>
+
+              <label for="frmConsideraciones">Consideraciones éticas * (máximo 500 caracteres)</label>
+              <input type="text" id="frmConsideraciones" name="frmConsideraciones" class="required_tab2 str_int_on" data-msj="msjConsideraciones" size="100" maxlength="500"/>
+              <div id="msjConsideraciones"></div>
+             
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div id="trat3" style="display: none">
+            <div class="thecont">
+              <label for="frmProtocolo">¿El proyecto es patrocinado por la industria farmacéutica? *</label>
+                <input type="radio" name="frmProtocolo" id="frmProtocolo" value="si" class="required_tab3"> Sí 
+                <input type="radio" name="frmProtocolo" id="frmProtocolo" value="no" class="required_tab3" checked> No
+                <div id="msjProtocolo"></div>
+
+                <label for="frmPatrocinador">Si su respuesta fue “Si” por favor registre el nombre del patrocinador/CRO del proyecto?</label>
+                <input type="text" id="frmPatrocinador" name="frmPatrocinador" size="100" maxlength="100" data-msj="msjPatrocinador"/>
+                <div id="msjPatrocinador"></div>
+
+
+                <label for="frmFinanciacion">¿El trabajo será presentado a una convocatoria (interna/externa) para financiación? *</label>
+                <input type="radio" name="frmFinanciacion" id="frmFinanciacion" class="required_tab3" value="si"> Sí 
+                <input type="radio" name="frmFinanciacion" id="frmFinanciacion" class="required_tab3" value="no" checked> No
+                <div id="msjFinanciacion"></div>
+
+
+                <label for="frmConvocatoria">En caso afirmativo por favor escribir nombre de la convocatoria</label>
+                <input type="text" id="frmConvocatoria" name="frmConvocatoria" size="100" maxlength="200" data-msj="msjConvocatoria"/>
+                <div id="msjConvocatoria"></div>
+
+                
+
+                <label for="frmFinanciamiento">Datos del financiamiento</label>
+
+
+<table id="finan"><tr><th>Presupuesto total</th>
+<td colspan="2">$&nbsp;&nbsp;&nbsp;<input style="display: inline-block;" type="text" id="frmPresupuestoTotal" name="frmPresupuestoTotal" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><th>Fuente de financiación </th>
+<th>Valor financiado </th>
+<th>Relacione las instituciones involucradas</th></tr>
+<tr><td>Recursos de instituciones de educación superior</td>
+<td><input type="text" id="frmValorFin0" name="frmValorFin0" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns0" name="frmRelIns0" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>Recursos públicos nacionales</td>
+<td><input type="text" id="frmValorFin1" name="frmValorFin1" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns1" name="frmRelIns1" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>Recursos públicos departamentales o municipales</td>
+<td><input type="text" id="frmValorFin2" name="frmValorFin2" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns2" name="frmRelIns2" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>Recursos de instituciones privadas</td>
+<td><input type="text" id="frmValorFin3" name="frmValorFin3" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns3" name="frmRelIns3" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>Otras entidades</td>
+<td><input type="text" id="frmValorFin4" name="frmValorFin4" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns4" name="frmRelIns4" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>Recursos personales</td>
+<td><input type="text" id="frmValorFin5" name="frmValorFin5" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns5" name="frmRelIns5" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td rowspan="2">Recursos internacionales</td>
+<td rowspan="2"><input type="text" id="frmValorFin6" name="frmValorFin6" class="required_tab3" size="" data-msj=""/></td>
+<td><input type="text" id="frmRelIns6" name="frmRelIns6" class="required_tab3" size="" data-msj=""/></td></tr>
+<tr><td>País financiador:&nbsp;&nbsp;&nbsp;<input style="display: inline-block; width: 50%;" type="text" id="frmPaisFin7" name="frmPaisFin7" class="required_tab3" size="" data-msj=""/></td></tr>
+</table>
+
+<p class="botnar"><a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2"><i class="fa fa-angle-double-left"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="mostrar_trat4('trat4'); return false" id="mostrar_trat4"><i class="fa fa-angle-double-right"></i></a></p>
+
+             
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div id="trat4" style="display: none">
+            <div class="thecont">
+              <label for="frmGrupo">Por favor seleccione el/los grupo(s) de investigación que participan en el proyecto (puede seleccionar más de una opción)</label>               
+                <table id="thistab">
+                  <tr>
+                    <td width="33%">
+                      <input type="checkbox" name="frmGrupo[]" value="1" class="required_tab4 chk_val" data-msj="msjGrupo"/>Anaboleas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="2" class="required_tab4 chk_val" data-msj="msjGrupo"/>Administración investigativa Sanitas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="3" class="required_tab4 chk_val" data-msj="msjGrupo"/>Cuidado de la salud en el contexto individual, familiar y social<br>
+                      <input type="checkbox" name="frmGrupo[]" value="4" class="required_tab4 chk_val" data-msj="msjGrupo">Epidemiología clínica avanzada, sistemas de información y tecnología en salud<br>
+                      <input type="checkbox" name="frmGrupo[]" value="5" class="required_tab4 chk_val" data-msj="msjGrupo"/>Estudios de dolor y cuidados paliativos (ESDOPAL)<br>
+                      <input type="checkbox" name="frmGrupo[]" value="6" class="required_tab4 chk_val" data-msj="msjGrupo"/>Evaluación de tecnologías y políticas en salud<br>
+                      <input type="checkbox" name="frmGrupo[]" value="7" class="required_tab4 chk_val" data-msj="msjGrupo"/>Gestión en salud
+                    </td>
+                    <td width="33%">
+                      <input type="checkbox" name="frmGrupo[]" value="8" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo de inmunología clínica aplicada<br>
+                      <input type="checkbox" name="frmGrupo[]" value="9" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo de investigación en nutrición clínica<br>
+                      <input type="checkbox" name="frmGrupo[]" value="10" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo de investigación en ortopedia y traumatología (GIOT)<br>
+                      <input type="checkbox" name="frmGrupo[]" value="11" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo de investigación, pedagogía, didáctica y evaluación<br>
+                      <input type="checkbox" name="frmGrupo[]" value="12" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo de investigación traslacional<br>
+                      <input type="checkbox" name="frmGrupo[]" value="13" class="required_tab4 chk_val" data-msj="msjGrupo"/>Grupo medicina crítica<br>
+                      <input type="checkbox" name="frmGrupo[]" value="14" class="required_tab4 chk_val" data-msj="msjGrupo"/>Imágenes diagnósticas Sanitas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="15" class="required_tab4 chk_val" data-msj="msjGrupo"/>Innovación y retos en cirugía
+                    </td>
+                    <td width="33%">
+                      <input type="checkbox" name="frmGrupo[]" value="16" class="required_tab4 chk_val" data-msj="msjGrupo"/>INPAC<br>
+                      <input type="checkbox" name="frmGrupo[]" value="17" class="required_tab4 chk_val" data-msj="msjGrupo"/>Investigación Gastro Sanitas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="18" class="required_tab4 chk_val" data-msj="msjGrupo"/>Investigación urológica avanzada (INURA)<br>
+                      <input type="checkbox" name="frmGrupo[]" value="19" class="required_tab4 chk_val" data-msj="msjGrupo"/>Psicopatología y sociedad<br>
+                      <input type="checkbox" name="frmGrupo[]" value="20" class="required_tab4 chk_val" data-msj="msjGrupo"/>Psychology and health Sanitas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="21" class="required_tab4 chk_val" data-msj="msjGrupo"/>Salud de la Infancia<br>
+                      <input type="checkbox" name="frmGrupo[]" value="22" class="required_tab4 chk_val" data-msj="msjGrupo"/>Salud de la mujer Sanitas<br>
+                      <input type="checkbox" name="frmGrupo[]" value="23" class="required_tab4 chk_val" data-msj="msjGrupo"/>Sanitas Crea<br>
+                      <input type="checkbox" name="frmGrupo[]" value="24" class="required_tab4 chk_val" data-msj="msjGrupo"/>Sinapsis<br>
+                      <input type="checkbox" name="frmGrupo[]" value="25" class="required_tab4 chk_val" data-msj="msjGrupo"/>Visión Colombia
+                    </td>
+                  </tr>
+                </table>
+                <div id="msjGrupo"></div>
+                <br>
+              <div id="autor1" style="display: inline;">
+                <h3>Autor 1</h3>
+                <label for="frmNomautor1">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor1" name="autores[1][frmNomautor1]" size="100" class="required_tab4 str_on" data-msj="msjNomautor1"/>
+                <div id="msjNomautor1"></div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmTipo1">Tipo de documento de identidad *</label>
+                      <select name="autores[1][frmTipo1]" id="frmTipo1" class="required_tab4">
+                        <option value="">Seleccione</option>
+                        <option value="1">Cédula de Ciudadanía</option>
+                        <option value="2">Cédula de Extranjería</option>
+                        <option value="3">Documento Nacional de Identificación</option>
+                        <option value="4">Pasaporte</option>
+                      </select>
+                      <div id="msjTipo1"></div>
+                    </div>
+                    <div>
+                      <label for="frmNumdoc1">Número de documento de identidad *</label>
+                      <input type="text" id="frmNumdoc1" name="autores[1][frmNumdoc1]" size="10" class="required_tab4 int_on" data-msj="msjNumdoc1"/>
+                      <div id="msjNumdoc1" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmPaisRes1">País de residencia *</label>
+                      <input type="text" id="frmPaisRes1" name="autores[1][frmPaisRes1]" size="50" class="required_tab4 str_on" data-msj="msjPaisRes1"/>
+                      <div id="msjPaisRes1" style="padding-left: 0%;"></div>
+                    </div>
+                    <div>
+                      <label for="frmNivelEst1">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                      <select name="autores[1][frmNivelEst1]" id="frmNivelEst1" class="required_tab4">
+                        <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmTeleph1">Número de celular *</label>
+                      <input type="tel" id="frmTeleph1" name="autores[1][frmTeleph1]" size="50" class="required_tab4 int_on" data-msj="msjTeleph1">
+                      <div id="msjTeleph1" style="padding-left: 0%;"></div>
+                    </div>
+                    <div>
+                      <label for="frmCorreo1">Correo electrónico *</label>
+                      <input type="email" id="frmCorreo1" name="autores[1][frmCorreo1]" size="50" class="required_tab4">
+                      <div id="msjCorreo1" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmRol1">Rol del investigador en el proyecto *</label>
+                      <select name="autores[1][frmRol1]" id="frmRol1" class="required_tab4">
+                        <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                      </select>
+
+                    </div>
+                    <div>
+                      <label for="frmEspecialidad1">Especialidad *</label>
+                      <select name="autores[1][frmEspecialidad1]" id="frmEspecialidad1" class="required_tab4">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                      
+                      <div id="msjEspecialidad1"></div>
+                    </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmKeralty1">Vinculado a empresas del grupo Keralty *</label>
+                      <input type="radio" name="autores[1][frmKeralty1]" id="frmKeralty1" value="si" class="required_tab4"> Sí 
+                      <input type="radio" name="autores[1][frmKeralty1]" id="frmKeralty1" value="no" class="required_tab4" checked> No
+                      <div id="msjKeralty1"></div>
+                    </div>
+                    <div>
+                      <label for="frmEmpresaVin1">Empresa *</label>
+                      <select name="autores[1][frmEmpresaVin1]" id="frmEmpresaVin1" class="required_tab4">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEmpresaVin1"></div>
+                      <label for="frmOtraEmpresaVin1">Nombre de la otra Empresa</label>
+                      <input type="text" id="frmOtraEmpresaVin1" name="autores[1][frmOtraEmpresaVin1]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin1" class="required_tab4"/>
+                      <div id="msjOtraEmpresaVin1" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+              </div>
+
+              <div id="autor2" class="autores" style="display: none;" codigo="2">
+                <br><br>
+                <br><br>
+                <hr />
+                <br><br>
+                <br><br>
+                <h3>Autor 2</h3>
+                <div>
+                  <div>
+                    <label for="frmNomautor2">Nombre y apellidos completos *</label>
+                    <input type="text" id="frmNomautor2" name="autores[2][frmNomautor2]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor2" />
+                    <div id="msjNomautor2"></div>
+                  </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div>
+                      <label for="frmTipo2">Tipo de documento de identidad *</label>
+                      <select name="autores[2][frmTipo2]" id="frmTipo2" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Cédula de Ciudadanía</option>
+                        <option value="2">Cédula de Extranjería</option>
+                        <option value="3">Documento Nacional de Identificación</option>
+                        <option value="4">Pasaporte</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="frmNumdoc2">Número de documento de identidad *</label>
+                      <input type="text" id="frmNumdoc2" name="autores[2][frmNumdoc2]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc2"/>
+                      <div id="msjNumdoc2" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes2">País de residencia *</label>
+                <input type="text" id="frmPaisRes2" name="autores[2][frmPaisRes2]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes2"/>
+                <div id="msjPaisRes2" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst2">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[2][frmNivelEst2]" id="frmNivelEst2" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph2">Número de celular *</label>
+                <input type="tel" id="frmTeleph2" name="autores[2][frmTeleph2]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph2">
+                <div id="msjTeleph2" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo2">Correo electrónico *</label>
+                <input type="email" id="frmCorreo2" name="autores[2][frmCorreo2]" size="50" class="required_tab4_1">
+                <div id="msjCorreo2" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol2">Rol del investigador en el proyecto *</label>
+                  <select name="autores[2][frmRol2]" id="frmRol2" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad2">Especialidad *</label>
+                      <select name="autores[2][frmEspecialidad2]" id="frmEspecialidad2" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+               
+                <div id="msjEspecialidad2"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty2">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[2][frmKeralty2]" id="frmKeralty2" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[2][frmKeralty2]" id="frmKeralty2" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty2"></div></div>
+                    <div><label for="frmEmpresaVin2">Empresa *</label>
+                      <select name="autores[2][frmEmpresaVin2]" id="frmEmpresaVin2" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad2"></div>
+                      <label for="frmOtraEmpresaVin2">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin2" name="autores[2][frmOtraEmpresaVin2]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin2" class="required_tab4_1" />
+                <div id="msjOtraEmpresaVin2" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+
+        
+                
+              </div>
+
+
+
+
+              <div id="autor3" class="autores" style="display: none;" codigo="3">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 3</h3>
+                <div>
+                  <div>
+                  <label for="frmNomautor3">Nombre y apellidos completos *</label>
+                  <input type="text" id="frmNomautor3" name="autores[3][frmNomautor3]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor3">
+                  <div id="msjNomautor3"></div>
+                  </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo3">Tipo de documento de identidad *</label>
+                <select name="autores[3][frmTipo3]" id="frmTipo3" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc3">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc3" name="autores[3][frmNumdoc3]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc3">
+                <div id="msjNumdoc3" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes3">País de residencia *</label>
+                <input type="text" id="frmPaisRes3" name="autores[3][frmPaisRes3]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes3">
+                <div id="msjPaisRes3" style="padding-left: 0%;"></div></div>
+                    <div> <label for="frmNivelEst3">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[3][frmNivelEst3]" id="frmNivelEst3" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph3">Número de celular *</label>
+                <input type="tel" id="frmTeleph3" name="autores[3][frmTeleph3]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph3">
+                <div id="msjTeleph3" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo3">Correo electrónico *</label>
+                <input type="email" id="frmCorreo3" name="autores[3][frmCorreo3]" size="50" class="required_tab4_1">
+                <div id="msjCorreo3" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol3">Rol del investigador en el proyecto *</label>
+                  <select name="autores[3][frmRol3]" id="frmRol3" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad3">Especialidad *</label>
+                      <select name="autores[3][frmEspecialidad3]" id="frmEspecialidad3" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                
+                <div id="msjEspecialidad3"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty3">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[3][frmKeralty3]" id="frmKeralty3" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[3][frmKeralty3]" id="frmKeralty3" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty3"></div></div>
+                    <div><label for="frmEmpresaVin3">Empresa *</label>
+                      <select name="autores[3][frmEmpresaVin3]" id="frmEmpresaVin3" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      
+                      <div id="msjEmpresaVin3"></div>
+                      <label for="frmOtraEmpresaVin3">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin3" name="autores[3][frmOtraEmpresaVin3]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin3" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin3" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+                
+              </div>
+             
+
+              <div id="autor4" class="autores" style="display: none;" codigo="4">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 4</h3>
+                <div>
+                  <div>
+                  <label for="frmNomautor4">Nombre y apellidos completos *</label>
+                  <input type="text" id="frmNomautor4" name="autores[4][frmNomautor4]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor4">
+                  <div id="msjNomautor4"></div>
+                  </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo4">Tipo de documento de identidad *</label>
+                <select name="autores[4][frmTipo4]" id="frmTipo4" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc4">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc4" name="autores[4][frmNumdoc4]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc4">
+                <div id="msjNumdoc4" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes4">País de residencia *</label>
+                <input type="text" id="frmPaisRes4" name="autores[4][frmPaisRes4]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes4">
+                <div id="msjPaisRes4" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst4">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[4][frmNivelEst4]" id="frmNivelEst4" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph4">Número de celular *</label>
+                <input type="tel" id="frmTeleph4" name="autores[4][frmTeleph4]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph4">
+                <div id="msjTeleph4" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo4">Correo electrónico *</label>
+                <input type="email" id="frmCorreo4" name="autores[4][frmCorreo4]" size="50" class="required_tab4_1">
+                <div id="msjCorreo4" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol4">Rol del investigador en el proyecto *</label>
+                  <select name="autores[4][frmRol4]" id="frmRol4" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad4">Especialidad *</label>
+                      <select name="autores[4][frmEspecialidad4]" id="frmEspecialidad4" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad4"></div>
+</div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty4">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[4][frmKeralty4]" id="frmKeralty4" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[4][frmKeralty4]" id="frmKeralty4" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty4"></div></div>
+                    <div><label for="frmEmpresaVin4">Empresa *</label>
+                      <select name="autores[4][frmEmpresaVin4]" id="frmEmpresaVin4" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad1"></div>
+                    <label for="frmOtraEmpresaVin4">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin4" name="autores[4][frmOtraEmpresaVin4]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin4" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin4" style="padding-left: 0%;"></div>
+              </div>
+                </div>
+                
+              </div>
+
+
+              <div id="autor5" class="autores" style="display: none;" codigo="5">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 5</h3>
+                <div>
+                <div>
+                <label for="frmNomautor5">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor5" name="autores[5][frmNomautor5]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor5">
+                <div id="msjNomautor5"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo5">Tipo de documento de identidad *</label>
+                <select name="autores[5][frmTipo5]" id="frmTipo5" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc5">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc5" name="autores[5][frmNumdoc5]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc5">
+                <div id="msjNumdoc5" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes5">País de residencia *</label>
+                <input type="text" id="frmPaisRes5" name="autores[5][frmPaisRes5]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes5">
+                <div id="msjPaisRes5" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst5">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[5][frmNivelEst5]" id="frmNivelEst5" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph5">Número de celular *</label>
+                <input type="tel" id="frmTeleph5" name="autores[5][frmTeleph5]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph5">
+                <div id="msjTeleph5" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo5">Correo electrónico *</label>
+                <input type="email" id="frmCorreo5" name="autores[5][frmCorreo5]" size="50" class="required_tab4_1">
+                <div id="msjCorreo5" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol5">Rol del investigador en el proyecto *</label>
+                  <select name="autores[5][frmRol5]" id="frmRol5" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad5">Especialidad *</label>
+                      <select name="autores[5][frmEspecialidad5]" id="frmEspecialidad5" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad5"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty5">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[5][frmKeralty5]" id="frmKeralty5" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[5][frmKeralty5]" id="frmKeralty5" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty5"></div></div>
+                    <div><label for="frmEmpresaVin5">Empresa *</label>
+                      <select name="autores[5][frmEmpresaVin5]" id="frmEmpresaVin5" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad5"></div>
+                <label for="frmOtraEmpresaVin5">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin5" name="autores[5][frmOtraEmpresaVin5]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin5" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin5" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+              </div>
+
+
+              <div id="autor6" class="autores" style="display: none;" codigo="6">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 6</h3>
+                <div>
+                <div>
+                <label for="frmNomautor6">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor6" name="autores[6][frmNomautor6]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor6">
+                <div id="msjNomautor6"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo6">Tipo de documento de identidad *</label>
+                <select name="autores[6][frmTipo6]" id="frmTipo6" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc6">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc6" name="autores[6][frmNumdoc6]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc6">
+                <div id="msjNumdoc6" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes6">País de residencia *</label>
+                <input type="text" id="frmPaisRes6" name="autores[6][frmPaisRes6]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes6"/>
+                <div id="msjPaisRes6" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst6">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[6][frmNivelEst6]" id="frmNivelEst6" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph6">Número de celular *</label>
+                <input type="tel" id="frmTeleph6" name="autores[6][frmTeleph6]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph6">
+                <div id="msjTeleph6" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo6">Correo electrónico *</label>
+                <input type="email" id="frmCorreo6" name="autores[6][frmCorreo6]" size="50" class="required_tab4_1">
+                <div id="msjCorreo6" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol6">Rol del investigador en el proyecto *</label>
+                  <select name="autores[6][frmRol6]" id="frmRol6" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad6">Especialidad *</label>
+                      <select name="autores[6][frmEspecialidad6]" id="frmEspecialidad6" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad6"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty6">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[6][frmKeralty6]" id="frmKeralty6" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[6][frmKeralty6]" id="frmKeralty6" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty6"></div></div>
+                    <div><label for="frmEmpresaVin6">Empresa *</label>
+                      <select name="autores[6][frmEmpresaVin6]" id="frmEmpresaVin6" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad6"></div>
+                <label for="frmOtraEmpresaVin6">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin6" name="autores[6][frmOtraEmpresaVin6]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin6" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin6" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+              </div>
+
+
+
+              <div id="autor7" class="autores" style="display: none;" codigo="7">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 7</h3>
+                <div>
+                <div>
+                <label for="frmNomautor7">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor7" name="autores[7][frmNomautor7]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor7">
+                <div id="msjNomautor7"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo7">Tipo de documento de identidad *</label>
+                <select name="autores[7][frmTipo7]" id="frmTipo7" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc7">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc7" name="autores[7][frmNumdoc7]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc7">
+                <div id="msjNumdoc7" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes7">País de residencia *</label>
+                <input type="text" id="frmPaisRes7" name="autores[7][frmPaisRes7]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes7">
+                <div id="msjPaisRes7" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst7">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[7][frmNivelEst7]" id="frmNivelEst7" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph7">Número de celular *</label>
+                <input type="tel" id="frmTeleph7" name="autores[7][frmTeleph7]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph7">
+                <div id="msjTeleph7" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo7">Correo electrónico *</label>
+                <input type="email" id="frmCorreo7" name="autores[7][frmCorreo7]" size="50" class="required_tab4_1">
+                <div id="msjCorreo7" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol7">Rol del investigador en el proyecto *</label>
+                  <select name="autores[7][frmRol7]" id="frmRol7" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select>
+</div>
+                    <div><label for="frmEspecialidad7">Especialidad *</label>
+                      <select name="autores[7][frmEspecialidad7]" id="frmEspecialidad7" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad7"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty7">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[7][frmKeralty7]" id="frmKeralty7" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[7][frmKeralty7]" id="frmKeralty7" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty7"></div></div>
+                    <div><label for="frmEmpresaVin7">Empresa *</label>
+                      <select name="autores[7][frmEmpresaVin7]" id="frmEmpresaVin7" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad7"></div>
+                <label for="frmOtraEmpresaVin7">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin7" name="autores[7][frmOtraEmpresaVin7]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin7" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin7" style="padding-left: 0%;"></div>
+                    </div>
+                </div>
+
+                
+                
+              </div>
+
+
+
+              <div id="autor8" class="autores" style="display: none;" codigo="8">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 8</h3>
+                <div>
+                <div>
+                <label for="frmNomautor8">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor8" name="autores[8][frmNomautor8]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor8">
+                <div id="msjNomautor8"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo8">Tipo de documento de identidad *</label>
+                <select name="autores[8][frmTipo8]" id="frmTipo8" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc8">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc8" name="autores[8][frmNumdoc8]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc8"/>
+                <div id="msjNumdoc8" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes8">País de residencia *</label>
+                <input type="text" id="frmPaisRes8" name="autores[8][frmPaisRes8]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes8"/>
+                <div id="msjPaisRes8" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst8">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[8][frmNivelEst8]" id="frmNivelEst8" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph8">Número de celular *</label>
+                <input type="tel" id="frmTeleph8" name="autores[8][frmTeleph8]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph8">
+                <div id="msjTeleph8" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo8">Correo electrónico *</label>
+                <input type="email" id="frmCorreo8" name="autores[8][frmCorreo8]" size="50" class="required_tab4_1">
+                <div id="msjCorreo8" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol8">Rol del investigador en el proyecto *</label>
+                  <select name="autores[8][frmRol8]" id="frmRol8" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad8">Especialidad *</label>
+                      <select name="autores[8][frmEspecialidad8]" id="frmEspecialidad8" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad8"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty8">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[8][frmKeralty8]" id="frmKeralty8" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[8][frmKeralty8]" id="frmKeralty8" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty8"></div></div>
+                    <div><label for="frmEmpresaVin8">Empresa *</label>
+                      <select name="autores[8][frmEmpresaVin8]" id="frmEmpresaVin8" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad8"></div>
+
+                      <label for="frmOtraEmpresaVin8">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin8" name="autores[8][frmOtraEmpresaVin8]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin8" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin8" style="padding-left: 0%;"></div></div>
+                </div>
+
+              
+                
+              </div>
+
+
+              <div id="autor9" class="autores" style="display: none;" codigo="9">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 9</h3>
+                <div>
+                <div>
+                <label for="frmNomautor9">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor9" name="autores[9][frmNomautor9]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor9" />
+                <div id="msjNomautor9"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo9">Tipo de documento de identidad *</label>
+                <select name="autores[9][frmTipo9]" id="frmTipo9" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Documento Nacional de Identificación</option>
+                  <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc9">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc9" name="autores[9][frmNumdoc9]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc9"/>
+                <div id="msjNumdoc9" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes9">País de residencia *</label>
+                <input type="text" id="frmPaisRes9" name="autores[9][frmPaisRes9]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes9"/>
+                <div id="msjPaisRes9" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst9">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[9][frmNivelEst9]" id="frmNivelEst9" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph9">Número de celular *</label>
+                <input type="tel" id="frmTeleph9" name="autores[9][frmTeleph9]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph9">
+                <div id="msjTeleph9" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo9">Correo electrónico *</label>
+                <input type="email" id="frmCorreo9" name="autores[9][frmCorreo9]" size="50" class="required_tab4_1">
+                <div id="msjCorreo9" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol9">Rol del investigador en el proyecto *</label>
+                  <select name="autores[9][frmRol9]" id="frmRol9" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad9">Especialidad *</label>
+                      <select name="autores[9][frmEspecialidad9]" id="frmEspecialidad9" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad9"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmKeralty9">Vinculado a empresas del grupo Keralty *</label>
+                <input type="radio" name="autores[9][frmKeralty9]" id="frmKeralty9" value="si" class="required_tab4_1"> Sí 
+                <input type="radio" name="autores[9][frmKeralty9]" id="frmKeralty9" value="no" class="required_tab4_1" checked> No
+                <div id="msjKeralty9"></div></div>
+                    <div><label for="frmEmpresaVin9">Empresa *</label>
+                      <select name="autores[9][frmEmpresaVin9]" id="frmEmpresaVin9" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Clínica Universitaria Colombia</option>
+                        <option value="2">Clínica Reina Sofía</option>
+                        <option value="3">Clínica Pediátrica</option>
+                        <option value="4">Fundación Universitaria Sanitas</option>
+                        <option value="5">Otro</option>
+                      </select>
+                      <div id="msjEspecialidad9"></div>
+<label for="frmOtraEmpresaVin9">Nombre de la Empresa</label>
+                <input type="text" id="frmOtraEmpresaVin9" name="autores[9][frmOtraEmpresaVin9]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin9" class="required_tab4_1"/>
+                <div id="msjOtraEmpresaVin9" style="padding-left: 0%;"></div>
+
+                    </div>
+                </div>
+
+              </div>
+
+
+
+              <div id="autor10" class="autores" style="display: none;" codigo="10">
+                <br><br>
+                <hr />
+                <br><br>
+                <h3>Autor 10</h3>
+                <div>
+                <div>
+                <label for="frmNomautor10">Nombre y apellidos completos *</label>
+                <input type="text" id="frmNomautor10" name="autores[10][frmNomautor10]" size="100" class="required_tab4_1 str_on" data-msj="msjNomautor10"/>
+                <div id="msjNomautor10"></div>
+                </div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTipo10">Tipo de documento de identidad *</label>
+                <select name="autores[10][frmTipo10]" id="tipo10" class="required_tab4_1"/>
+                <option value="">Seleccione</option>
+                <option value="1">Cédula de Ciudadanía</option>
+                <option value="2">Cédula de Extranjería</option>
+                <option value="3">Documento Nacional de Identificación</option>
+                <option value="4">Pasaporte</option>
+                </select></div>
+                    <div><label for="frmNumdoc10">Número de documento de identidad *</label>
+                <input type="text" id="frmNumdoc10" name="autores[10][frmNumdoc10]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc10"/>
+                <div id="msjNumdoc10" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmPaisRes10">País de residencia *</label>
+                <input type="text" id="frmPaisRes10" name="autores[10][frmPaisRes10]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes10"/>
+                <div id="msjPaisRes10" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmNivelEst10">Máximo nivel de estudio teniendo en cuenta el último título obtenido *</label>
+                <select name="autores[10][frmNivelEst10]" id="frmNivelEst10" class="required_tab4_1">
+                  <option value="">Seleccione</option>
+                        <option value="1">Postdoctorado</option>
+                        <option value="2">Doctorado</option>
+                        <option value="3">Maestría</option>
+                        <option value="4">Especialización universitaria</option>
+                        <option value="5">Especialización Técnico Profesional</option>
+                        <option value="6">Especialización Tecnológica</option>
+                        <option value="7">Universitaria</option>
+                        <option value="8">Tecnológica</option>
+                        <option value="9">Formación Técnica Profesional</option>
+                        <option value="10">Estudiante pregrado</option>
+                        <option value="11">Especialización Médico Quirúrgica</option>
+                        <option value="12">Sin título</option>
+                </select></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmTeleph10">Número de celular *</label>
+                <input type="tel" id="frmTeleph10" name="autores[10][frmTeleph10]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph10">
+                <div id="msjTeleph10" style="padding-left: 0%;"></div></div>
+                    <div><label for="frmCorreo10">Correo electrónico *</label>
+                <input type="email" id="frmCorreo10" name="autores[10][frmCorreo10]" size="50" class="required_tab4_1">
+                <div id="msjCorreo10" style="padding-left: 0%;"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                    <div><label for="frmRol10">Rol del investigador en el proyecto *</label>
+                  <select name="autores[10][frmRol10]" id="frmRol10" class="required_tab4_1">
+                    <option value="">Seleccione</option>
+                        <option value="1">Director de Proyecto</option>
+                        <option value="2">Investigador Principal</option>
+                        <option value="3">CoInvestigador</option>
+                        <option value="4">Investigador</option>
+                        <option value="5">Asesor</option>
+                        <option value="6">Estudiante - Joven Investigador</option>
+                        <option value="7">Estudiante - Semillero</option>
+                        <option value="8">Auxiliar - Joven Investigador</option>
+                        <option value="9">Auxiliar - Semillero</option>
+                  </select></div>
+                    <div><label for="frmEspecialidad10">Especialidad *</label>
+                      <select name="autores[10][frmEspecialidad10]" id="frmEspecialidad10" class="required_tab4_1">
+                        <option value="">Seleccione</option>
+                        <option value="1">Medicina Interna </option>
+                        <option value="2">Cirugía general </option>
+                        <option value="3">Dermatología </option>
+                        <option value="4">Gastroenterología</option>
+                        <option value="5">Ginecología y obstetricia  </option>
+                        <option value="6">Medicina critica </option>
+                        <option value="7">Medicina nuclear </option>
+                        <option value="8">Oftalmología </option>
+                        <option value="9">Ortopedia y traumatología </option>
+                        <option value="10">Otorrinolaringología</option>
+                        <option value="11">Pediatría </option>
+                        <option value="12">Psiquiatría y salud mental</option>
+                        <option value="13">Radiología e imágenes diagnósticas </option>
+                        <option value="14">Urología </option>
+                        <option value="15">Anestesiología</option>
+                        <option value="16">Salud publica </option>
+                        <option value="17">Enfermería </option>
+                        <option value="18">Psicología </option>
+                      </select>
+                <div id="msjEspecialidad10"></div></div>
+                </div>
+
+                <div class="tabledosform">
+                  <div><label for="frmKeralty10">Vinculado a empresas del grupo Keralty *</label>
+              <input type="radio" name="autores[10][frmKeralty10]" id="frmKeralty10" value="si" class="required_tab4_1"> Sí 
+              <input type="radio" name="autores[10][frmKeralty10]" id="frmKeralty10" value="no" class="required_tab4_1" checked> No
+              <div id="msjKeralty9"></div></div>
+                  <div><label for="frmEmpresaVin10">Empresa *</label>
+                    <select name="autores[10][frmEmpresaVin10]" id="frmEmpresaVin10" class="required_tab4_1">
+                      <option value="">Seleccione</option>
+                      <option value="1">Clínica Universitaria Colombia</option>
+                      <option value="2">Clínica Reina Sofía</option>
+                      <option value="3">Clínica Pediátrica</option>
+                      <option value="4">Fundación Universitaria Sanitas</option>
+                      <option value="5">Otro</option>
+                    </select>
+                    <div id="msjEspecialidad9"></div>
+              <label for="frmOtraEmpresaVin10">Nombre de la Empresa</label>
+              <input type="text" id="frmOtraEmpresaVin10" name="autores[10][frmOtraEmpresaVin10]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin10" class="required_tab4_1"/>
+              <div id="msjOtraEmpresaVin10" style="padding-left: 0%;"></div>
+
+                  </div>
+              </div>
+
+                
+                
+              </div>
+
+
+              <p id="authx">
+                <a id="auth1" href="#" onclick="authoring1('autor2'); return false">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a>
+                <a id="auth2" href="#" onclick="authoring2('autor3'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth2b" href="#" onclick="authoring2b('autor2'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth3" href="#" onclick="authoring3('autor4'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth3b" href="#" onclick="authoring3b('autor3'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth4" href="#" onclick="authoring4('autor5'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth4b" href="#" onclick="authoring4b('autor4'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth5" href="#" onclick="authoring5('autor6'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth5b" href="#" onclick="authoring5b('autor5'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth6" href="#" onclick="authoring6('autor7'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth6b" href="#" onclick="authoring6b('autor6'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth7" href="#" onclick="authoring7('autor8'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth7b" href="#" onclick="authoring7b('autor7'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth8" href="#" onclick="authoring8('autor9'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth8b" href="#" onclick="authoring8b('autor8'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth9" href="#" onclick="authoring9('autor10'); return false" style="display: none;">Agregar autor&nbsp;&nbsp;
+                  <i class="fa fa-plus-circle"></i></a><a id="auth9b" href="#" onclick="authoring9b('autor9'); return false" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+                <a id="auth10b" href="#" onclick="authoring10b('autor9'); return false" style="display: none;">Quitar autor&nbsp;&nbsp;
+                  <i class="fa fa-minus-circle"></i></a>
+              </p>
+              <p class="botnar"><a href="#" onclick="mostrar_trat3('trat3'); return false" id="mostrar_trat3"><i class="fa fa-angle-double-left"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="mostrar_trat5('trat5'); return false" id="mostrar_trat5"><i class="fa fa-angle-double-right"></i></a></p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div id="trat5" style="display: none">
+            <div class="thecont">
+              <p>El presente formulario contiene la información requerida para inscribir su proyecto de investigación para su aprobación por el Comité de Ética de Investigación de la Fundación Universitaria Sanitas.  Para completar su inscripción debe hacer llegar a la oficina del Comité los documentos descritos a continuación teniendo en cuenta el tipo de proyecto:</p>
+              <ol id="lista">
+              <!-- <li>Trabajo original </li>
+              <li>Carta de aprobación de Comité de Etica</li>
+              <li>Copia de consentimientos informados (si aplica)</li>
+              <li>Aprobación del proyecto por la entidad regulatoria respectiva (INVIMA, Ministerio del medio ambiente, entre otros) – Si aplica</li>
+              <li>Certificación de BPC/GCP de la institución donde se realizó el trabajo (si aplica)</li>
+              <li>Aprobación del laboratorio de experimentación animal donde se realizó el trabajo (si aplica)</li>
+              <li>Certificado de no publicación</li>
+              <li>Certificado de fuente de financiación</li>
+              <li>Carta dirigida al Comité de Ética en Investigación, solicitando la evaluación y/o aprobación del documento</li> -->
+              <li>Declaración de Conflictos de Interés en Investigación - <a href="documentos/Declaracion_Conflictos_Interes_Investigacion_V0.docx" target="_blank"><strong>Descargar aquí <i class="fa fa-share"></i></strong></a></li>
+              <!-- <li>Autorización de uso de datos personales</li>
+              <li>Hoja de vida en formato CvLAC de cada integrante del equipo investigador que participará en el desarrollo del Protocolo</li>
+              <li>Fotocopia documento de identidad y tarjeta profesional, títulos de formación académica (diploma y acta), según normatividad nacional (Resolución 2378 de 2008)</li>
+              <li>Certificado de buenas prácticas clínicas</li>
+              <li>Aprobación del contenido temático expedida por el Jefe del servicio o coordinador del programa académico (solo para estudiantes de postgrado)</li> -->
+              <li>Protocolo de Investigación con sus respectivos anexos y enmiendas (si aplica). Una (1) copia impresa y una (1) copia en medio magnético - <a href="documentos/SolicituddeevaluacionProyectosInvestigacion_V3_abril_2019.xlsx" target="_blank"><strong>Descargar aquí <i class="fa fa-share"></i></strong></a></li>
+              <!-- <li>Resumen del protocolo en el formato definido por la Unidad de Investigación</li>
+              <li>Manual del Investigador: una (1) copia en español y una (1) copia en inglés</li>
+              <li>Material de soporte y/o reclutamiento de sujetos de investigación (folletos informativos, boletines, publicidad, etc)</li>
+              <li>Informes consolidados de Seguridad y Reporte de Eventos Adversos con la copia completa de la historia clínica</li>
+              <li>Pólizas de seguro de riesgos para la salud de los participantes y explicación de la forma de compensación o responsabilidad asumida por los eventos adversos generados durante el estudio</li>
+              <li>Formato de evaluación de protocolos definido por el INVIMA</li>
+              <li>Formato de Consentimiento Informado con Hoja de Autorización del Paciente (si aplica)</li>
+              <li>Presupuesto del estudio para el sitio de investigación y cronograma de su ejecución</li> -->
+              <li>Evaluación metodológica realizada por el asesor metodológico - <a href="documentos/Evaluacion_metodologica (1).xls" target="_blank"><strong>Descargar aquí <i class="fa fa-share"></i></strong></a></li>
+            </ol>
+
+
+<h3>Lista de chequeo</h3>
+<table id="listacheq"><tr>
+  <th></th>
+  <th>Protocolo est. observacional</th>
+  <th>Protocolo est. de intervención</th>
+  <th>Protocolo est. secundarios</th>
+  <th>Estudios cualitativos</th>
+</tr>
+<tr><td>Carta dirigida al Comité de Ética en Investigación, solicitando la evaluación y/o aprobación del documento.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Declaración de Conflictos de Interés en Investigación.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Autorización de uso de datos personales.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Hoja de Vida en formato CvLAC de cada integrante del equipo investigador que participarán en el desarrollo del Protocolo. </td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Fotocopia documento de identidad y tarjeta profesional, títulos de formación académica (diploma y acta), según  normatividad nacional (Resolución 2378 de 2008).</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Certificado de buenas prácticas clínicas. </td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Aprobación del contenido temático expedida por el Jefe del servicio o coordinador del programa académico (Solo para estudiantes de postgrado).</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Protocolo de Investigación con sus respectivos anexos y enmiendas (si aplica). Una (1) copia impresa y una (1) copia en medio magnético). </td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Resumen del protocolo en el formato definido por la Unidad de Investigación. </td><td>*</td><td class="fillt"></td><td>*</td><td>*</td></tr>
+<tr><td>Manual del Investigador una (1) copia en español y una (1) copia en Inglés. </td><td class="fillt"></td><td>*</td><td class="fillt"></td><td class="fillt"></td></tr>
+<tr><td>Material de soporte y/o reclutamiento de sujetos de investigación (folletos informativos, boletines, publicidad etc.).</td><td class="fillt"></td><td>*</td><td class="fillt"></td><td class="fillt"></td></tr>
+<tr><td>Informes consolidados de Seguridad y Reporte de Eventos Adversos con la copia completa de la historia clínica. </td><td class="fillt"></td><td>*</td><td class="fillt"></td><td class="fillt"></td></tr>
+<tr><td>Pólizas de seguro de riesgos para la salud de los participantes y explicación de la forma de compensación o responsabilidad asumida por los eventos adversos generados durante el estudio. </td><td class="fillt"></td><td>*</td><td class="fillt"></td><td class="fillt"></td></tr>
+<tr><td>Formato de evaluación de protocolos definido por el INVIMA.</td><td class="fillt"></td><td>*</td><td class="fillt"></td><td class="fillt"></td></tr>
+<tr><td>Formato de Consentimiento Informado con Hoja de Autorización del Paciente (si aplica).</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Presupuesto del estudio para el sitio de investigación y cronograma de su ejecución.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
+<tr><td>Evaluación metodológica realizada por el asesor metodológico.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr></table>
+
+<br><br>
+
+
+
+              <p>Para lo anterior puede radicar los documentos en la dirección Cra. 66 # 23 – 46, Sede universitaria 2do piso Comité de Ética en Investigación o enviarlos por correo certificado o por correo interno de Keralty, en un sobre cerrado marcado con el título del proyecto y el código de inscripción que se le asignará al momento de guardar la presente inscripción. Si los documentos no están completos y diligenciados, el trabajo no seguirá con el proceso.</p>
+              <br>
+
+              <p class="botnar"><a href="#" onclick="mostrar_trat4('trat4'); return false" id="mostrar_trat4"><i class="fa fa-angle-double-left"></i></a></p>
+
+              <!-- <input type="submit" name="submit" value="Enviar" style="margin-right: 10px;" /> -->
+              <input type="button" name="enviar" id="enviar" value="Enviar" style="margin-right: 10px;" />
+            </div>
+          </div>
+
+
+        </form>
+  </div>
+
+  <div id="dialog-confirm">
+    <p id="text_dialgo"></p>
+  </div>
+
+<script src="admin/js/mys.js"></script>
+<script src="admin/js/main.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="admin/js/formulario.js"></script>
+
+</body>
+</html>

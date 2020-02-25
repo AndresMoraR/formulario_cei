@@ -1,0 +1,21 @@
+body {
+    background-image: url('../../back.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+th {
+    font-size: 13px;
+}
+
+td {
+    font-size: 13px;
+}
+
+.dataTables_info {
+    font-size: smaller;
+}
+
+.dataTables_paginate {
+    font-size: smaller;
+}
