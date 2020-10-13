@@ -1,6 +1,7 @@
 $(function() {                
     getDatatable();
 
+    //Buscar datos de proyectos de investigación
     $('#btn_search').click(function(){
         var date_init = $('#inp_date_init').val();
         var date_end = $('#inp_date_end').val();                
@@ -13,6 +14,7 @@ $(function() {
         getDatatable('','');
     })
 
+    //Filtrar entre fechas, por medio de plugin datepicker
     from = $("#inp_date_init")
         .datepicker({
         defaultDate: "+1w",
@@ -35,6 +37,7 @@ $(function() {
             from.datepicker( "option", "maxDate", getDate(this) );
         });
 
+    //Obtener datos de proyectos de investigación
     function getDatatable(date_init, date_end){
         $('#tbl_data').DataTable({
             destroy: true,
@@ -81,14 +84,17 @@ $(function() {
         });
     }
     
+    //Recargar datos de proyectos de investigación
     setInterval(function(){
         $('#tbl_data').DataTable().ajax.reload();
     }, 30000);
 
+    //Abrir detalle de datos de proyectos de investigación
     $('#tbl_data').on('click', '.btn_detalle', function () {
         loadModal(this.value);
     });
 
+    //Cargar detalle de datos de proyectos de investigación
     function loadModal(id_proyecto){
         $.ajax({
             type: 'POST',
@@ -103,6 +109,7 @@ $(function() {
         });
     }
 
+    //Formato de fechas para campos datepicker
     function getDate(element) {
         var date;
         try {
