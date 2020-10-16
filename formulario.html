@@ -13,10 +13,7 @@
   </style>
 </head>
 <body>
-
 <p id="banner"><img src="fus_vertical_blanco.png" style="max-width: 100%; width: 300px;"></p>
-
-
 <div id="theform">
 <br><br>
 <h2>Formulario de Inscripción de Proyectos para aprobación por <br>Comité de Ética en Investigación</h2>
@@ -25,7 +22,6 @@
           <p style="text-align: center;">Por favor registre todos los datos solicitados en las 4 pestañas del presente formulario y al final guarde la inscripción del proyecto. Se deben ingresar los datos completos hasta finalizar y guardar, no se guardarán datos parciales. Si no se completa el registro los datos ingresados se perderán.</p>
           <br><br>
         </div>
-
         <div id="tabsi">
           <div class="msp" id="for1">
             <a href="#" onclick="mostrar_trat1('trat1'); return false" id="mostrar_trat1">Datos generales del proyecto</a></div>
@@ -46,7 +42,6 @@
               <label for="frmTitulo">Título completo del trabajo *</label>
               <input type="text" id="frmTitulo" name="frmTitulo" class="required_tab1 str_int_on" size="100" maxlength="400" data-msj="msjTitulo"/>
               <div id="msjTitulo"></div>
-
               <label for="frmEstudio">Tipo de estudio *</label>
                 <select name="frmEstudio" id="frmEstudio" class="required_tab1">
                   <option value="">Seleccione</option>
@@ -55,7 +50,6 @@
                   <option value="3">Estudio secundario</option>
                   <option value="4">Estudio cualitativo</option>
                 </select>
-
                 <label for="frmTipoTrabajo">Tipo de trabajo *</label>
                 <select name="frmTipoTrabajo" id="frmTipoTrabajo" class="required_tab1">
                   <option value="">Seleccione</option>
@@ -64,7 +58,6 @@
                   <option value="3">Trabajo colaborativo</option>
                   <option value="4">Industria farmacéutica</option>
                 </select>
-
                 <label for="frmLugarRecc">Lugar en donde se realiza la recolección/reclutamiento de sujetos *</label>
                 <input type="checkbox" name="frmLugarRecc[]" value="1"/>Clínica Universitaria Colombia
                 <input type="checkbox" name="frmLugarRecc[]" value="2"/>Clínica Reina Sofía
@@ -75,101 +68,58 @@
                 <br>
                 <label for="frmOtraInstitucion">Si elegió "Otra institución", mencione cuál:</label>
                 <input type="text" id="frmOtraInstitucion" name="frmOtraInstitucion" size="100" maxlength="100" class="required_tab1" data-msj="msjOtraInstitucion"/>
-                <div id="msjOtraInstitucion"></div>
-             
-
-              <p class="botnar"><a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2"> <i class="fa fa-angle-double-right"></i> </a></p>
-
-
-             
+                <div id="msjOtraInstitucion"></div>           
+                <p class="botnar"><a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2"> <i class="fa fa-angle-double-right"></i> </a></p>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
           <div id="trat2" style="display: none">
             <div class="thecont">
-
               <label for="frmPregunta">Pregunta de investigación * (máximo 100 caracteres)</label>
               <input type="text" id="frmPregunta" name="frmPregunta" class="required_tab2 str_int_on" data-msj="msjPregunta" size="100" maxlength="100"/>
-              <div id="msjPregunta"></div>
-
+              <div id="msjPregunta"></div>           
               <label for="frmObjetivo">Objetivo general * (máximo 100 caracteres)</label>
               <input type="text" id="frmObjetivo" name="frmObjetivo" class="required_tab2 str_int_on" data-msj="msjObjetivo" size="100" maxlength="100"/>
               <div id="msjObjetivo"></div>
-
               <label for="frmObjetivoEsp">Objetivo específico * (máximo 500 caracteres)</label>
               <input type="text" id="frmObjetivoEsp" name="frmObjetivoEsp" class="required_tab2 str_int_on" data-msj="msjObjetivoEsp" size="100" maxlength="500"/>
               <div id="msjObjetivoEsp"></div>
-
               <label for="frmPoblacion">Población/participantes * (máximo 100 caracteres)</label>
               <input type="text" id="frmPoblacion" name="frmPoblacion" class="required_tab2 str_int_on" data-msj="msjPoblacion" size="100" maxlength="100"/>
               <div id="msjPoblacion"></div>
-
               <label for="frmTratamiento">Tratamiento/intervención * (máximo 500 caracteres)</label>
               <input type="text" id="frmTratamiento" name="frmTratamiento" class="required_tab2 str_int_on" data-msj="msjTratamiento" size="100" maxlength="500"/>
               <div id="msjTratamiento"></div>
-
               <label for="frmAnalisis">Análisis de datos * (máximo 250 caracteres)</label>
               <input type="text" id="frmAnalisis" name="frmAnalisis" class="required_tab2 str_int_on" data-msj="msjAnalisis" size="100" maxlength="250"/>
               <div id="msjAnalisis"></div>
-
               <label for="frmResultados">Resultados esperados del proyecto * (máximo 500 caracteres)</label>
               <input type="text" id="frmResultados" name="frmResultados" class="required_tab2 str_int_on" data-msj="msjResultados" size="100" maxlength="500"/>
               <div id="msjResultados"></div>
-
               <label for="frmDuracion">Duración del proyecto  (meses) * (máximo 250 caracteres)</label>
               <input type="text" id="frmDuracion" name="frmDuracion" class="required_tab2 str_int_on" data-msj="msjDuracion" size="100" maxlength="250" data-msj="msjDuracion" />
               <div id="msjDuracion"></div>
-
               <label for="frmConsideraciones">Consideraciones éticas * (máximo 500 caracteres)</label>
               <input type="text" id="frmConsideraciones" name="frmConsideraciones" class="required_tab2 str_int_on" data-msj="msjConsideraciones" size="100" maxlength="500"/>
-              <div id="msjConsideraciones"></div>
-             
+              <div id="msjConsideraciones"></div>        
             </div>
           </div>
-
-
-
-
-
-
-
-
-
           <div id="trat3" style="display: none">
             <div class="thecont">
               <label for="frmProtocolo">¿El proyecto es patrocinado por la industria farmacéutica? *</label>
                 <input type="radio" name="frmProtocolo" id="frmProtocolo" value="si" class="required_tab3"> Sí 
                 <input type="radio" name="frmProtocolo" id="frmProtocolo" value="no" class="required_tab3" checked> No
                 <div id="msjProtocolo"></div>
-
                 <label for="frmPatrocinador">Si su respuesta fue “Si” por favor registre el nombre del patrocinador/CRO del proyecto?</label>
                 <input type="text" id="frmPatrocinador" name="frmPatrocinador" size="100" maxlength="100" data-msj="msjPatrocinador"/>
                 <div id="msjPatrocinador"></div>
-
-
                 <label for="frmFinanciacion">¿El trabajo será presentado a una convocatoria (interna/externa) para financiación? *</label>
                 <input type="radio" name="frmFinanciacion" id="frmFinanciacion" class="required_tab3" value="si"> Sí 
                 <input type="radio" name="frmFinanciacion" id="frmFinanciacion" class="required_tab3" value="no" checked> No
                 <div id="msjFinanciacion"></div>
-
-
                 <label for="frmConvocatoria">En caso afirmativo por favor escribir nombre de la convocatoria</label>
                 <input type="text" id="frmConvocatoria" name="frmConvocatoria" size="100" maxlength="200" data-msj="msjConvocatoria"/>
                 <div id="msjConvocatoria"></div>
-
-                
-
                 <label for="frmFinanciamiento">Datos del financiamiento</label>
-
-
 <table id="finan"><tr><th>Presupuesto total</th>
 <td colspan="2">$&nbsp;&nbsp;&nbsp;<input style="display: inline-block;" type="text" id="frmPresupuestoTotal" name="frmPresupuestoTotal" class="required_tab3" size="" data-msj=""/></td></tr>
 <tr><th>Fuente de financiación </th>
@@ -198,21 +148,9 @@
 <td><input type="text" id="frmRelIns6" name="frmRelIns6" class="required_tab3" size="" data-msj=""/></td></tr>
 <tr><td>País financiador:&nbsp;&nbsp;&nbsp;<input style="display: inline-block; width: 50%;" type="text" id="frmPaisFin7" name="frmPaisFin7" class="required_tab3" size="" data-msj=""/></td></tr>
 </table>
-
 <p class="botnar"><a href="#" onclick="mostrar_trat2('trat2'); return false" id="mostrar_trat2"><i class="fa fa-angle-double-left"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="mostrar_trat4('trat4'); return false" id="mostrar_trat4"><i class="fa fa-angle-double-right"></i></a></p>
-
-             
             </div>
           </div>
-
-
-
-
-
-
-
-
-
           <div id="trat4" style="display: none">
             <div class="thecont">
               <label for="frmGrupo">Por favor seleccione el/los grupo(s) de investigación que participan en el proyecto (puede seleccionar más de una opción)</label>               
@@ -263,7 +201,6 @@
                 <label for="frmNomautor1">Nombre y apellidos completos *</label>
                 <input type="text" id="frmNomautor1" name="autores[1][frmNomautor1]" size="100" class="required_tab4 str_on" data-msj="msjNomautor1"/>
                 <div id="msjNomautor1"></div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmTipo1">Tipo de documento de identidad *</label>
@@ -283,7 +220,6 @@
                       <div id="msjNumdoc1" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmPaisRes1">País de residencia *</label>
@@ -309,7 +245,6 @@
                       </select>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmTeleph1">Número de celular *</label>
@@ -322,7 +257,6 @@
                       <div id="msjCorreo1" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmRol1">Rol del investigador en el proyecto *</label>
@@ -338,7 +272,6 @@
                         <option value="8">Auxiliar - Joven Investigador</option>
                         <option value="9">Auxiliar - Semillero</option>
                       </select>
-
                     </div>
                     <div>
                       <label for="frmEspecialidad1">Especialidad *</label>
@@ -371,7 +304,6 @@
                       <div id="msjOtraEspecialidad1" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmKeralty1">Vinculado a empresas del grupo Keralty *</label>
@@ -396,7 +328,6 @@
                     </div>
                 </div>
               </div>
-
               <div id="autor2" class="autores" style="display: none;" codigo="2">
                 <br><br>
                 <br><br>
@@ -411,7 +342,6 @@
                     <div id="msjNomautor2"></div>
                   </div>
                 </div>
-
                 <div class="tabledosform">
                     <div>
                       <label for="frmTipo2">Tipo de documento de identidad *</label>
@@ -430,7 +360,6 @@
                       <div id="msjNumdoc2" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes2">País de residencia *</label>
                 <input type="text" id="frmPaisRes2" name="autores[2][frmPaisRes2]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes2"/>
@@ -452,7 +381,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph2">Número de celular *</label>
                 <input type="tel" id="frmTeleph2" name="autores[2][frmTeleph2]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph2">
@@ -461,7 +389,6 @@
                 <input type="email" id="frmCorreo2" name="autores[2][frmCorreo2]" size="50" class="required_tab4_1">
                 <div id="msjCorreo2" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol2">Rol del investigador en el proyecto *</label>
                   <select name="autores[2][frmRol2]" id="frmRol2" class="required_tab4_1">
@@ -499,14 +426,12 @@
                         <option value="18">Psicología </option>
                         <option value="19">Otra </option>
                       </select>
-               
                 <div id="msjEspecialidad2"></div>
                 <label for="frmOtraEspecialidad2">Nombre de la otra Especialidad</label>
                       <input type="text" id="frmOtraEspecialidad2" name="autores[2][frmOtraEspecialidad2]" size="100" maxlength="50" data-msj="msjOtraEspecialidad2" class="required_tab4_1"/>
                       <div id="msjOtraEspecialidad2" style="padding-left: 0%;"></div>
                 </div>
               </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty2">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[2][frmKeralty2]" id="frmKeralty2" value="si" class="required_tab4_1"> Sí 
@@ -527,14 +452,7 @@
                 <div id="msjOtraEmpresaVin2" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
-        
-                
               </div>
-
-
-
-
               <div id="autor3" class="autores" style="display: none;" codigo="3">
                 <br><br>
                 <hr />
@@ -562,7 +480,6 @@
                 <input type="text" id="frmNumdoc3" name="autores[3][frmNumdoc3]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc3">
                 <div id="msjNumdoc3" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes3">País de residencia *</label>
                 <input type="text" id="frmPaisRes3" name="autores[3][frmPaisRes3]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes3">
@@ -584,7 +501,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph3">Número de celular *</label>
                 <input type="tel" id="frmTeleph3" name="autores[3][frmTeleph3]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph3">
@@ -593,7 +509,6 @@
                 <input type="email" id="frmCorreo3" name="autores[3][frmCorreo3]" size="50" class="required_tab4_1">
                 <div id="msjCorreo3" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol3">Rol del investigador en el proyecto *</label>
                   <select name="autores[3][frmRol3]" id="frmRol3" class="required_tab4_1">
@@ -630,16 +545,13 @@
                         <option value="17">Enfermería </option>
                         <option value="18">Psicología </option>
                         <option value="19">Otra </option>
-                      </select>
-                
+                      </select>       
                 <div id="msjEspecialidad3"></div>
                 <label for="frmOtraEspecialidad3">Nombre de la otra Especialidad</label>
                       <input type="text" id="frmOtraEspecialidad3" name="autores[3][frmOtraEspecialidad3]" size="100" maxlength="50" data-msj="msjOtraEspecialidad3" class="required_tab4_1"/>
                       <div id="msjOtraEspecialidad3" style="padding-left: 0%;"></div>
-
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty3">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[3][frmKeralty3]" id="frmKeralty3" value="si" class="required_tab4_1"> Sí 
@@ -653,18 +565,14 @@
                         <option value="3">Clínica Pediátrica</option>
                         <option value="4">Fundación Universitaria Sanitas</option>
                         <option value="5">Otro</option>
-                      </select>
-                      
+                      </select>                
                       <div id="msjEmpresaVin3"></div>
                       <label for="frmOtraEmpresaVin3">Nombre de la Empresa</label>
                 <input type="text" id="frmOtraEmpresaVin3" name="autores[3][frmOtraEmpresaVin3]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin3" class="required_tab4_1"/>
                 <div id="msjOtraEmpresaVin3" style="padding-left: 0%;"></div>
                     </div>
-                </div>
-                
+                </div>         
               </div>
-             
-
               <div id="autor4" class="autores" style="display: none;" codigo="4">
                 <br><br>
                 <hr />
@@ -677,7 +585,6 @@
                   <div id="msjNomautor4"></div>
                   </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo4">Tipo de documento de identidad *</label>
                 <select name="autores[4][frmTipo4]" id="frmTipo4" class="required_tab4_1">
@@ -692,7 +599,6 @@
                 <input type="text" id="frmNumdoc4" name="autores[4][frmNumdoc4]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc4">
                 <div id="msjNumdoc4" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes4">País de residencia *</label>
                 <input type="text" id="frmPaisRes4" name="autores[4][frmPaisRes4]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes4">
@@ -714,7 +620,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph4">Número de celular *</label>
                 <input type="tel" id="frmTeleph4" name="autores[4][frmTeleph4]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph4">
@@ -723,7 +628,6 @@
                 <input type="email" id="frmCorreo4" name="autores[4][frmCorreo4]" size="50" class="required_tab4_1">
                 <div id="msjCorreo4" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol4">Rol del investigador en el proyecto *</label>
                   <select name="autores[4][frmRol4]" id="frmRol4" class="required_tab4_1">
@@ -762,13 +666,11 @@
                         <option value="19">Otra </option>
                       </select>
                 <div id="msjEspecialidad4"></div>
-
                 <label for="frmOtraEspecialidad4">Nombre de la otra Especialidad</label>
                       <input type="text" id="frmOtraEspecialidad4" name="autores[4][frmOtraEspecialidad4]" size="100" maxlength="50" data-msj="msjOtraEspecialidad4" class="required_tab4_1"/>
                       <div id="msjOtraEspecialidad4" style="padding-left: 0%;"></div>
                   </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty4">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[4][frmKeralty4]" id="frmKeralty4" value="si" class="required_tab4_1"> Sí 
@@ -788,11 +690,8 @@
                 <input type="text" id="frmOtraEmpresaVin4" name="autores[4][frmOtraEmpresaVin4]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin4" class="required_tab4_1"/>
                 <div id="msjOtraEmpresaVin4" style="padding-left: 0%;"></div>
               </div>
-                </div>
-                
+                </div>            
               </div>
-
-
               <div id="autor5" class="autores" style="display: none;" codigo="5">
                 <br><br>
                 <hr />
@@ -805,7 +704,6 @@
                 <div id="msjNomautor5"></div>
                 </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo5">Tipo de documento de identidad *</label>
                 <select name="autores[5][frmTipo5]" id="frmTipo5" class="required_tab4_1">
@@ -820,7 +718,6 @@
                 <input type="text" id="frmNumdoc5" name="autores[5][frmNumdoc5]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc5">
                 <div id="msjNumdoc5" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes5">País de residencia *</label>
                 <input type="text" id="frmPaisRes5" name="autores[5][frmPaisRes5]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes5">
@@ -842,7 +739,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph5">Número de celular *</label>
                 <input type="tel" id="frmTeleph5" name="autores[5][frmTeleph5]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph5">
@@ -851,7 +747,6 @@
                 <input type="email" id="frmCorreo5" name="autores[5][frmCorreo5]" size="50" class="required_tab4_1">
                 <div id="msjCorreo5" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol5">Rol del investigador en el proyecto *</label>
                   <select name="autores[5][frmRol5]" id="frmRol5" class="required_tab4_1">
@@ -895,7 +790,6 @@
                       <div id="msjOtraEspecialidad5" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty5">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[5][frmKeralty5]" id="frmKeralty5" value="si" class="required_tab4_1"> Sí 
@@ -917,8 +811,6 @@
                     </div>
                 </div>
               </div>
-
-
               <div id="autor6" class="autores" style="display: none;" codigo="6">
                 <br><br>
                 <hr />
@@ -931,7 +823,6 @@
                 <div id="msjNomautor6"></div>
                 </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo6">Tipo de documento de identidad *</label>
                 <select name="autores[6][frmTipo6]" id="frmTipo6" class="required_tab4_1">
@@ -946,7 +837,6 @@
                 <input type="text" id="frmNumdoc6" name="autores[6][frmNumdoc6]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc6">
                 <div id="msjNumdoc6" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes6">País de residencia *</label>
                 <input type="text" id="frmPaisRes6" name="autores[6][frmPaisRes6]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes6"/>
@@ -968,7 +858,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph6">Número de celular *</label>
                 <input type="tel" id="frmTeleph6" name="autores[6][frmTeleph6]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph6">
@@ -977,7 +866,6 @@
                 <input type="email" id="frmCorreo6" name="autores[6][frmCorreo6]" size="50" class="required_tab4_1">
                 <div id="msjCorreo6" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol6">Rol del investigador en el proyecto *</label>
                   <select name="autores[6][frmRol6]" id="frmRol6" class="required_tab4_1">
@@ -1021,7 +909,6 @@
                       <div id="msjOtraEspecialidad6" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty6">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[6][frmKeralty6]" id="frmKeralty6" value="si" class="required_tab4_1"> Sí 
@@ -1043,9 +930,6 @@
                     </div>
                 </div>
               </div>
-
-
-
               <div id="autor7" class="autores" style="display: none;" codigo="7">
                 <br><br>
                 <hr />
@@ -1073,7 +957,6 @@
                 <input type="text" id="frmNumdoc7" name="autores[7][frmNumdoc7]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc7">
                 <div id="msjNumdoc7" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes7">País de residencia *</label>
                 <input type="text" id="frmPaisRes7" name="autores[7][frmPaisRes7]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes7">
@@ -1095,7 +978,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph7">Número de celular *</label>
                 <input type="tel" id="frmTeleph7" name="autores[7][frmTeleph7]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph7">
@@ -1104,7 +986,6 @@
                 <input type="email" id="frmCorreo7" name="autores[7][frmCorreo7]" size="50" class="required_tab4_1">
                 <div id="msjCorreo7" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol7">Rol del investigador en el proyecto *</label>
                   <select name="autores[7][frmRol7]" id="frmRol7" class="required_tab4_1">
@@ -1149,7 +1030,6 @@
                       <div id="msjOtraEspecialidad7" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty7">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[7][frmKeralty7]" id="frmKeralty7" value="si" class="required_tab4_1"> Sí 
@@ -1169,14 +1049,8 @@
                 <input type="text" id="frmOtraEmpresaVin7" name="autores[7][frmOtraEmpresaVin7]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin7" class="required_tab4_1"/>
                 <div id="msjOtraEmpresaVin7" style="padding-left: 0%;"></div>
                     </div>
-                </div>
-
-                
-                
+                </div>            
               </div>
-
-
-
               <div id="autor8" class="autores" style="display: none;" codigo="8">
                 <br><br>
                 <hr />
@@ -1189,7 +1063,6 @@
                 <div id="msjNomautor8"></div>
                 </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo8">Tipo de documento de identidad *</label>
                 <select name="autores[8][frmTipo8]" id="frmTipo8" class="required_tab4_1">
@@ -1204,7 +1077,6 @@
                 <input type="text" id="frmNumdoc8" name="autores[8][frmNumdoc8]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc8"/>
                 <div id="msjNumdoc8" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes8">País de residencia *</label>
                 <input type="text" id="frmPaisRes8" name="autores[8][frmPaisRes8]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes8"/>
@@ -1226,7 +1098,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph8">Número de celular *</label>
                 <input type="tel" id="frmTeleph8" name="autores[8][frmTeleph8]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph8">
@@ -1235,7 +1106,6 @@
                 <input type="email" id="frmCorreo8" name="autores[8][frmCorreo8]" size="50" class="required_tab4_1">
                 <div id="msjCorreo8" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol8">Rol del investigador en el proyecto *</label>
                   <select name="autores[8][frmRol8]" id="frmRol8" class="required_tab4_1">
@@ -1279,7 +1149,6 @@
                       <div id="msjOtraEspecialidad8" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty8">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[8][frmKeralty8]" id="frmKeralty8" value="si" class="required_tab4_1"> Sí 
@@ -1295,17 +1164,11 @@
                         <option value="5">Otro</option>
                       </select>
                       <div id="msjEmpresaVin8"></div>
-
                       <label for="frmOtraEmpresaVin8">Nombre de la Empresa</label>
                 <input type="text" id="frmOtraEmpresaVin8" name="autores[8][frmOtraEmpresaVin8]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin8" class="required_tab4_1"/>
                 <div id="msjOtraEmpresaVin8" style="padding-left: 0%;"></div></div>
-                </div>
-
-              
-                
+                </div>         
               </div>
-
-
               <div id="autor9" class="autores" style="display: none;" codigo="9">
                 <br><br>
                 <hr />
@@ -1318,7 +1181,6 @@
                 <div id="msjNomautor9"></div>
                 </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo9">Tipo de documento de identidad *</label>
                 <select name="autores[9][frmTipo9]" id="frmTipo9" class="required_tab4_1">
@@ -1333,7 +1195,6 @@
                 <input type="text" id="frmNumdoc9" name="autores[9][frmNumdoc9]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc9"/>
                 <div id="msjNumdoc9" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes9">País de residencia *</label>
                 <input type="text" id="frmPaisRes9" name="autores[9][frmPaisRes9]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes9"/>
@@ -1355,7 +1216,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph9">Número de celular *</label>
                 <input type="tel" id="frmTeleph9" name="autores[9][frmTeleph9]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph9">
@@ -1364,7 +1224,6 @@
                 <input type="email" id="frmCorreo9" name="autores[9][frmCorreo9]" size="50" class="required_tab4_1">
                 <div id="msjCorreo9" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol9">Rol del investigador en el proyecto *</label>
                   <select name="autores[9][frmRol9]" id="frmRol9" class="required_tab4_1">
@@ -1408,7 +1267,6 @@
                       <div id="msOtraEspecialidad9" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmKeralty9">Vinculado a empresas del grupo Keralty *</label>
                 <input type="radio" name="autores[9][frmKeralty9]" id="frmKeralty9" value="si" class="required_tab4_1"> Sí 
@@ -1427,14 +1285,9 @@
                 <label for="frmOtraEmpresaVin9">Nombre de la Empresa</label>
                 <input type="text" id="frmOtraEmpresaVin9" name="autores[9][frmOtraEmpresaVin9]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin9" class="required_tab4_1"/>
                 <div id="msjOtraEmpresaVin9" style="padding-left: 0%;"></div>
-
                     </div>
                 </div>
-
               </div>
-
-
-
               <div id="autor10" class="autores" style="display: none;" codigo="10">
                 <br><br>
                 <hr />
@@ -1447,7 +1300,6 @@
                 <div id="msjNomautor10"></div>
                 </div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTipo10">Tipo de documento de identidad *</label>
                 <select name="autores[10][frmTipo10]" id="tipo10" class="required_tab4_1"/>
@@ -1462,7 +1314,6 @@
                 <input type="text" id="frmNumdoc10" name="autores[10][frmNumdoc10]" size="10" class="required_tab4_1 int_on" data-msj="msjNumdoc10"/>
                 <div id="msjNumdoc10" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmPaisRes10">País de residencia *</label>
                 <input type="text" id="frmPaisRes10" name="autores[10][frmPaisRes10]" size="50" class="required_tab4_1 str_on" data-msj="msjPaisRes10"/>
@@ -1484,7 +1335,6 @@
                         <option value="12">Sin título</option>
                 </select></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmTeleph10">Número de celular *</label>
                 <input type="tel" id="frmTeleph10" name="autores[10][frmTeleph10]" size="50" class="required_tab4_1 int_on" data-msj="msjTeleph10">
@@ -1493,7 +1343,6 @@
                 <input type="email" id="frmCorreo10" name="autores[10][frmCorreo10]" size="50" class="required_tab4_1">
                 <div id="msjCorreo10" style="padding-left: 0%;"></div></div>
                 </div>
-
                 <div class="tabledosform">
                     <div><label for="frmRol10">Rol del investigador en el proyecto *</label>
                   <select name="autores[10][frmRol10]" id="frmRol10" class="required_tab4_1">
@@ -1537,7 +1386,6 @@
                       <div id="msjOtraEmpresaVin10" style="padding-left: 0%;"></div>
                     </div>
                 </div>
-
                 <div class="tabledosform">
                   <div><label for="frmKeralty10">Vinculado a empresas del grupo Keralty *</label>
               <input type="radio" name="autores[10][frmKeralty10]" id="frmKeralty10" value="si" class="required_tab4_1"> Sí 
@@ -1556,15 +1404,9 @@
               <label for="frmOtraEmpresaVin10">Nombre de la Empresa</label>
               <input type="text" id="frmOtraEmpresaVin10" name="autores[10][frmOtraEmpresaVin10]" size="100" maxlength="50" data-msj="msjOtraEmpresaVin10" class="required_tab4_1"/>
               <div id="msjOtraEmpresaVin10" style="padding-left: 0%;"></div>
-
                   </div>
+              </div>           
               </div>
-
-                
-                
-              </div>
-
-
               <p id="authx">
                 <a id="auth1" href="#" onclick="authoring1('autor2'); return false">Agregar autor&nbsp;&nbsp;
                   <i class="fa fa-plus-circle"></i></a>
@@ -1598,17 +1440,6 @@
               <p class="botnar"><a href="#" onclick="mostrar_trat3('trat3'); return false" id="mostrar_trat3"><i class="fa fa-angle-double-left"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="mostrar_trat5('trat5'); return false" id="mostrar_trat5"><i class="fa fa-angle-double-right"></i></a></p>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
           <div id="trat5" style="display: none">
             <div class="thecont">
               <p>El presente formulario contiene la información requerida para inscribir su proyecto de investigación para su aprobación por el Comité de Ética de Investigación de la Fundación Universitaria Sanitas.  Para completar su inscripción debe hacer llegar a la oficina del Comité los documentos descritos a continuación teniendo en cuenta el tipo de proyecto:</p>
@@ -1639,8 +1470,6 @@
               <li>Presupuesto del estudio para el sitio de investigación y cronograma de su ejecución</li> -->
               <li>Evaluación metodológica realizada por el asesor metodológico - <a href="documentos/Evaluacion_metodologica (1).xls" target="_blank"><strong>Descargar aquí <i class="fa fa-share"></i></strong></a></li>
             </ol>
-
-
 <h3>Lista de chequeo</h3>
 <table id="listacheq"><tr>
   <th></th>
@@ -1666,35 +1495,23 @@
 <tr><td>Formato de Consentimiento Informado con Hoja de Autorización del Paciente (si aplica).</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
 <tr><td>Presupuesto del estudio para el sitio de investigación y cronograma de su ejecución.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr>
 <tr><td>Evaluación metodológica realizada por el asesor metodológico.</td><td>*</td><td>*</td><td>*</td><td>*</td></tr></table>
-
 <br><br>
-
-
-
               <p>Para lo anterior puede radicar los documentos en la dirección Cra. 66 # 23 – 46, Sede universitaria 2do piso Comité de Ética en Investigación o enviarlos por correo certificado o por correo interno de Keralty, en un sobre cerrado marcado con el título del proyecto y el código de inscripción que se le asignará al momento de guardar la presente inscripción. Si los documentos no están completos y diligenciados, el trabajo no seguirá con el proceso.</p>
               <br>
-
               <p class="botnar"><a href="#" onclick="mostrar_trat4('trat4'); return false" id="mostrar_trat4"><i class="fa fa-angle-double-left"></i></a></p>
-
-              <!-- <input type="submit" name="submit" value="Enviar" style="margin-right: 10px;" /> -->
               <input type="button" name="enviar" id="enviar" value="Enviar" style="margin-right: 10px;" />
             </div>
           </div>
-
-
         </form>
   </div>
-
   <div id="dialog-confirm">
     <p id="text_dialgo"></p>
   </div>
-
 <script src="admin/js/mys.js"></script>
 <script src="admin/js/main.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="admin/js/formulario.js"></script>
-
 </body>
 </html>
