@@ -6,7 +6,7 @@ $(function (){
         width: 400,
         modal: true,
         close: function() {
-            window.location.href = 'gracias.html';
+            window.location.href = '../formulario/gracias.html';
         }
     });
 
