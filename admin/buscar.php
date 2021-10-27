@@ -11,7 +11,6 @@ require 'clases/conexion.php';
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-// LISTADO DE PROYECTOS GUARDADOS
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $conexion = conectar_db();

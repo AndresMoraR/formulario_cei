@@ -8,13 +8,10 @@ if (isset($_SESSION['usuario'])) {
 }
 $errores = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(!empty($_POST['inp_user']))
-    {
-        $usuario = filter_var(strtolower($_POST['inp_user']), FILTER_SANITIZE_STRING);
-        $password = $_POST['inp_pass'];
-        $password = hash('md5', $password);
-    }
-    
+    $usuario = filter_var(strtolower($_POST['inp_user']), FILTER_SANITIZE_STRING);
+    $password = $_POST['inp_pass'];
+    $password = hash('md5', $password);
+
     try {
         $conexion = conectar_db();
         $resultado = select_user($usuario,$password,$conexion);

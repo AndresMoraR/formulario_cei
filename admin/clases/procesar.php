@@ -1,8 +1,8 @@
 <?php session_start();
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 require 'funciones.php';
 require 'conexion.php';
@@ -18,8 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $resultado_6 = guardar_financiar_proyecto($_POST, $resultado_1, conectar_db());
         foreach ($_POST['frmGrupo'] as $grupo) {
-            $otro_grupo = ($grupo == 26) ? $_POST['frmOtroGrupo'] : null;
-            $data_2 = ['grupo' => $grupo, 'proyecto' => $resultado_1, 'otro' => $otro_grupo];
+            $data_2 = ['grupo' => $grupo, 'proyecto' => $resultado_1];
             $resultado_3 = guardar_proyecto_grupo($data_2, conectar_db());   
         }
         foreach ($_POST['autores'] as $key => $autor) {

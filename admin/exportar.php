@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $fp = fopen('php://output', 'w');
         if ($fp && $resultados) {
-            header('Content-Type: text/csv;charset=UTF-8');
+            header('Content-Type: application/csv;charset=UTF-8');
             header('Content-Disposition: attachment; filename="archivo-plano-'.date("Y-m-d H:i:s").'.csv"');
             header('Pragma: no-cache');
             header('Expires: 0');

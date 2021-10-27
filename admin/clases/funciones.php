@@ -24,7 +24,6 @@ function select_projects_by_date($fecha_inicial, $fecha_final, $conexion, $csv)
     }else {
         return $statement->fetchAll();        
     }
-    
 }
 
 // CONSULTA DE TODOS LOS PROYECTOS
@@ -145,11 +144,10 @@ function guardar_proyecto_lugar($data, $conexion)
 // GUARDAR GRUPOS X PROYECTO
 function guardar_proyecto_grupo($data, $conexion)
 {
-    $statement = $conexion->prepare('INSERT INTO inv_grupo_proyecto(grupo, proyecto) VALUES(:grupo, :proyecto, :otro)');
+    $statement = $conexion->prepare('INSERT INTO inv_grupo_proyecto(grupo, proyecto) VALUES(:grupo, :proyecto)');
     $statement->execute([
         'grupo' => $data['grupo'],
-        'proyecto' => $data['proyecto'],
-        'otro' => strtoupper($data['otro'])
+        'proyecto' => $data['proyecto']
     ]);
     return $statement->fetch();
 }
@@ -161,11 +159,11 @@ function guardar_autor($data, $key, $conexion)
         $statement = $conexion->prepare('
         INSERT INTO inv_autor (nombre, tipo_documento, num_documento, 
                         nivel_estudio_maximo, num_celular, correo, rol_investigador, 
-                        especialidad, otra_especialidad, vinculado_keralty, nombre_empresa, pais_residencia, otra_empresa)
+                        especialidad, vinculado_keralty, nombre_empresa, pais_residencia, otra_empresa)
                     VALUES(
                         :nombre, :tipo_documento, :num_documento, 
                         :nivel_estudio_maximo, :num_celular, :correo, :rol_investigador, 
-                        :especialidad, :otra_especialidad, :vinculado_keralty, :nombre_empresa, :pais_residencia, :otra_empresa
+                        :especialidad, :vinculado_keralty, :nombre_empresa, :pais_residencia, :otra_empresa
                         )   
         ');
         $statement->execute([
@@ -176,8 +174,7 @@ function guardar_autor($data, $key, $conexion)
             'num_celular' => strtoupper($data['frmTeleph'.$key]), 
             'correo' => strtoupper($data['frmCorreo'.$key]), 
             'rol_investigador' => strtoupper($data['frmRol'.$key]), 
-            'especialidad' => strtoupper($data['frmEspecialidad'.$key]),
-            'otra_especialidad' => strtoupper($data['otra_especialidad'].$key),
+            'especialidad' => strtoupper($data['frmEspecialidad'.$key]), 
             'vinculado_keralty' => strtoupper($data['frmKeralty'.$key]),
             'nombre_empresa' => strtoupper($data['frmEmpresaVin'.$key]), 
             'pais_residencia' => strtoupper($data['frmPaisRes'.$key]),
